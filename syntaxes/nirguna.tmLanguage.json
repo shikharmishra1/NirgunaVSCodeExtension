@@ -1,0 +1,75 @@
+{
+	"$schema": "../schema/schema.json",
+	"name": "nirguna",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#punctuation"
+		},
+		{
+			"include": "#function"
+		},
+		{
+			"include": "#identifier"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.nirguna",
+				"match": "\\b(मान|निर्गुण|नित्य|कर्म|वापस|खंडन|चालू|यदि|उत|उत यदि|चक्र|से|तक|जब)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.nirguna",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nirguna",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comment": {
+	  		"name": "comment.line.number-sign",
+			"match": "#.*$"
+		},
+		"numbers": {
+			"name": "constant.numeric.nirguna",
+			"match": "\\b(\\d+(\\.\\d+)?)\\b"
+		},
+		"operators": {
+			"name": "keyword.operator.nirguna",
+			"match": "\\b(और|या|<=|=|>=|==|<|>)\\b"
+		},
+		"punctuation": {
+			"name": "punctuation.nirguna",
+			"match": "[\\(\\)\\{\\}\\[\\],।]"
+		},
+		"function":{
+			"name": "entity.name.function",
+			"match": "\\b\\p{Devanagari}[\\p{Devanagari}\\d]*\\s*(?=\\()"
+		},
+		"identifier":{
+			"name": "variable.other.nirguna",
+			"match": "\\b\\p{Devanagari}[\\p{Devanagari}\\d]*\\b"
+		}
+
+	},
+	"scopeName": "source.nirguna"
+}

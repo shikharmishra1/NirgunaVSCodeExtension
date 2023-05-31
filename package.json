@@ -1,0 +1,25 @@
+{
+  "name": "nirguna",
+  "displayName": "Nirguna",
+  "description": "Nirguna is an WIP devnagari scripting language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "nirguna",
+      "aliases": ["nirguna", "nirguna"],
+      "extensions": [".ng",".nirguna"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "nirguna",
+      "scopeName": "source.nirguna",
+      "path": "./syntaxes/nirguna.tmLanguage.json"
+    }]
+  }
+}
