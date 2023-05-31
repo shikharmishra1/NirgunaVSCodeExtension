@@ -1,4 +1,4 @@
-# nirguna VSCode Extension 
+# Nirguna VSCode Extension 
 
 A simple syntax highlighter for NirgunaLanguage
 
